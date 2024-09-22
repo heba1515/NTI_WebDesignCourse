@@ -1,0 +1,107 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100svh;
+    max-height: 100svh;
+    width: 100svw;
+    max-width: 100svw;
+}
+
+header{
+    background-color: black;
+    color: white;
+}
+
+h1{
+    margin-left: 300px;
+}
+
+.fa-magnifying-glass{
+    text-align: left;
+}
+
+header a{
+    color: white;
+    text-decoration: none;
+}
+
+i{
+    margin: 3px;
+}
+
+.search{
+    text-align: right;
+    padding-right: 3px;
+}
+
+.search input{
+    background-color: black;
+    color: white;
+    border: 0px;
+}
+
+.words{
+    margin: 15px;
+    text-align: center;
+    word-spacing: 5px;
+}
+
+.card{
+    /* border: 1px solid gray; */
+    border-radius: 20px;
+    width: 300px;
+    margin: 5px auto;
+    box-shadow: 0px 0px 10px rgb(128, 128, 128);
+}
+
+.bimg{
+    width: 300px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+span{
+    display: inline-block;
+    margin: 5px;
+    padding: 3px;
+    background-color: rgb(114, 229, 229);
+    color: white;
+    border-radius: 30px;
+}
+
+.card p{
+    margin: 5px;
+    color: gray;
+}
+
+.uimg{
+    width: 30px;
+}
+
+.content{
+    margin: 5px;
+}
+
+.user{
+    margin: 5px 0px 15px 5px;
+}
+
+footer{
+    height: 300px;
+    width: 100%;
+    background-image: url();
+    background-repeat: no-repeat;
+    background-position: center; /* x,y -> right/left, top/bottom */
+    background-size: cover;
+    /* background-image: linear-gradient(aqua 25%, lightblue 25% 50%, blue 50% 75%, darkblue 75% 100%); */
+    /* background-image: linear-gradient(to top right, aqua 25%, lightblue 25% 50%, blue 50% 75%, darkblue 75% 100%); */
+    background-image: radial-gradient(#e66465, #9198e5);
+    background-image: radial-gradient(closest-side, #3f87a6, #ebf8e1, #f69d3c);
+    background: radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%);
+    background: radial-gradient(ellipse at top, #e66465, transparent),
+            radial-gradient(ellipse at bottom, #4d9f0c, transparent);
+}

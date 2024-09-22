@@ -1,0 +1,63 @@
+header {
+    background-color: black;
+    word-spacing: 20px;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    text-transform: capitalize;
+    /* font-variant: small-caps; */
+    /* text-decoration: line-through; */
+    /* text-align: center; */
+    text-indent: 10px;
+    /* text-shadow: 10px 10px 10px rgb(15,158,18) ; */
+}
+
+header a {
+    color: rgb(255, 255, 255);
+    /* color: rgba(0,0,0,15) */
+    text-decoration: none;
+    /*
+    text-transform: uppercase;
+    text-align: center;
+
+    */
+}
+
+header label {
+    color: rgb(255, 255, 255);
+}
+
+.fa-circle-half-stroke {
+    color: white;
+}
+
+nav {
+    background-color: rgb(15, 18, 15);
+}
+
+.fa-magnifying-glass, .p1, .p2 {
+    color: white;
+}
+
+nav .p1 {
+    font-weight: 800;
+    font-size: 30;
+    /* font-family: "Sofadi One", system-ui; */
+    font-family: "Open Sans", sans-serif;
+    font-weight: 100;
+    font-size: 35;
+
+    /*
+    font-style: italic;
+    */
+}
+
+.search{
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}

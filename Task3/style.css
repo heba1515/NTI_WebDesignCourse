@@ -1,0 +1,93 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 50px;
+}
+
+body{
+    height: 100svh;
+    max-height: 100svh;
+    width: 100svw;
+    max-width: 100svw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header a{
+    color: black;
+    text-decoration: none;
+    font-size: small;
+}
+
+h1{
+    text-transform: uppercase;
+    font-size: large;
+    font-weight: 700;
+    /* margin: 0px 100px 0px 50px ; */
+}
+
+.links{
+    text-align: center;
+    word-spacing: 20px;
+}
+
+.red, span{
+    color: orangered;
+}
+
+.button1{
+    text-align: right;
+}
+
+.icon{
+    width: 35px;
+    height: 34px;
+    background-color: orangered;
+    color: white;
+    font-size: x-small;
+    border-radius: 20px;
+    border-color: orangered;
+    transform: translateX(35px);
+}
+
+.sched{
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    margin: 0px 10px 10px 0px;
+    padding: 10px 10px 10px 35px;
+    font-size: x-small;
+}
+
+main{
+    padding: 100px;
+    height: 300px;
+    margin-left: 3px;
+    background-image: url("./img.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text1{
+    background-color: white;
+    width: fit-content;
+    padding: 5px;
+    font-size: x-small;
+}
+
+.text2{
+    color: white;
+    width: 240px;
+    text-transform: uppercase;
+    font-size: xx-large;
+    font-weight: 700;
+    line-height: 35px;
+    margin: 10px 0px;
+}

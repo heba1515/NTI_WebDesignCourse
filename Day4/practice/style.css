@@ -1,0 +1,103 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+
+body{
+    height: 100svh;
+    max-height: 100svh;
+    width: 100svw;
+    max-width: 100svw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    padding: 10px 50px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1{
+    text-transform: uppercase;
+    font-size: large;
+}
+
+nav{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+    gap: 15px;
+}
+
+nav ul a{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: small;
+    font-weight: 700;
+}
+
+.button button{
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgb(158, 158, 158);
+    border-radius: 50px;
+}
+
+.facebook, .twetter, .instegram{
+    color: rgb(139, 139, 139);
+}
+
+main{
+    display: flex;
+    padding: 50px;
+    justify-content: space-around;
+}
+
+.text{
+    width: 40%;
+    gap: 30px;
+    line-height: 30px;
+}
+
+.text span{
+    color: rgb(139, 139, 139);
+}
+
+.sspan{
+    font-size: small;
+}
+
+.user img{
+    width: 40px;
+    height: 40px;
+}
+
+.text h2{
+    margin: 10px 0px;
+}
+
+.img{
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    height: 600px;
+}
+
+.img img{
+    width: 40%;
+    height: 40%;
+    flex-grow: 2;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgb(203, 203, 203);
+}

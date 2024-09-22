@@ -1,0 +1,303 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+body{
+    height: 100svh;
+    max-height: 100svh;
+    width: 100svw;
+    max-width: 100svw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+aside{
+    display: block;
+    background-color: #f44336;
+    align-items: center;
+    width: 300px;
+    height: 100%;
+    /* padding: 40px 40px; */
+    font-size: 18px;
+    line-height: 1.5;
+    position: fixed;
+    z-index: 1;
+}
+
+aside h3{
+    color: white;
+    padding: 80px 40px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+aside div{
+    display: block;
+    line-height: 2.5;
+    width: 85%;
+    margin: 0px 30px;
+}
+
+aside div a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    padding: 0px 10px;
+}
+
+aside div a:hover{
+    background-color: white;
+    color: black;
+}
+
+main{
+    display: block;
+    margin-left: 350px;
+    padding: 70px 0px;
+}
+
+h1{
+    font-size: 64px;
+    margin: 30px 0px;
+}
+
+.span{
+    height: 50px;
+    font-size: 50px;
+    font-weight: 600;
+    color: #f44336;
+    padding: 30px 0px 20px 0px;
+}
+
+.span::before{
+    content: "";
+    position: absolute;
+    height: 8px;
+    width: 60px;
+    background-color: #f44336;
+    bottom: 0px;
+    left: 0px;
+    border-radius: 5px;
+}
+
+.imgs{
+    display: flex;
+    padding: 0px 10px;
+    margin: 50px 0px;
+}
+
+.imgs img{
+    width: 98%;
+    height: 98%;
+}
+
+.leftdiv, .rightdiv{
+    display: block;
+    width: 45%;
+}
+
+.leftdiv{
+    justify-content: left;
+}
+
+.rightdiv{
+    justify-content: right;
+}
+
+.parent1{
+    height: 378px;
+    margin: 3px 0px;
+}
+
+.child1{
+    width: 98%;
+    height: 98%;
+    background-color: rgba(150, 150, 150, 0.315);
+    position: absolute;
+    top: 0px;
+}
+
+.child1:hover{
+    opacity: 0;
+}
+
+.parent2{
+    height: 254px;
+    margin: 3px 0px;
+}
+
+.child2{
+    width: 98%;
+    height: 98%;
+    background-color: rgba(150, 150, 150, 0.315);
+    position: absolute;
+    top: 0px;
+}
+
+.child2:hover{
+    opacity: 0;
+}
+
+.parent3{
+    height: 254px;
+    margin: 3px 0px;
+}
+
+.child3{
+    width: 98%;
+    height: 98%;
+    background-color: rgba(150, 150, 150, 0.315);
+    position: absolute;
+    top: 0px;
+}
+
+.child3:hover{
+    opacity: 0;
+}
+
+.text{
+    margin: 40px 0px;
+    line-height: 1.5;
+    width: 95%;
+}
+
+.btext{
+    font-weight: bold;
+}
+
+.cards{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 30px 50px 0px;
+}
+
+.card{
+    width: 370px;
+    height: 400px;
+    background-color: rgb(237, 237, 237);
+}
+
+.card img{
+    width: 370px;
+}
+
+.content h3, .content p, .content span{
+    margin: 5px;
+    padding: 3px;
+}
+
+.content span{
+    display: inline-block;
+    color: rgb(151, 151, 151);
+}
+
+.offer{
+    display: flex;
+    width: 900px;
+    justify-content: space-around;
+    margin: 10px 0px 50px 0px;
+}
+
+.ldiv, .rdiv{
+    width: 49%;
+}
+
+.ldiv div, .rdiv div{
+    width: 100%;
+    height: 70px;
+    border-top: 1px solid rgb(215, 215, 215);
+    background-color: rgb(237, 237, 237);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.offer .ldiv .header1, .offer .rdiv .header2{
+    color: white;
+    font-size: large;
+}
+
+.offer .ldiv .header1{
+    background-color: gray;
+}
+
+.offer .rdiv .header2{
+    background-color: #f44336;
+}
+
+.offer .price{
+    display: block;
+    height: 150px;
+    padding: 50px 0px 50px 190px;
+}
+
+.offer .price p{
+    font-size: x-large;
+}
+
+.offer .price span{
+    color: rgb(122, 122, 122);
+}
+
+.offer button{
+    width: 70px;
+    height: 40px;
+    border: 0px;
+}
+
+.offer .ldiv button{
+    background-color: white;
+}
+
+.offer .rdiv button{
+    background-color: #f44336;
+    color: white;
+}
+
+.offer button:hover{
+    background-color: black;
+    color: white;
+}
+
+form input{
+    width: 95%;
+    height: 40px;
+    border: 1px solid rgb(135, 135, 135);
+}
+
+.submit{
+    background-color: #f44336;
+    border-color: #f44336;
+    color: white;
+    font-size: medium;
+}
+
+.submit:hover{
+    background-color: rgb(151, 151, 151);
+    border-color: rgb(151, 151, 151);
+    color: black;
+}
+
+footer{
+    width: 100svw;
+    height: 150px;
+    background-color: rgb(237, 237, 237);
+}
+
+footer p{
+    position: absolute;
+    bottom: 40px;
+    right: 60px;
+}
+
+footer a{
+    color: black;
+}
+
+footer a:hover{
+    color: rgb(151, 151, 151);
+}

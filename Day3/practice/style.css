@@ -1,0 +1,129 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100svh;
+    max-height: 100svh;
+    width: 100svw;
+    max-width: 100svw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header a{
+    color: black;
+    text-decoration: none;
+    font-size: small;
+}
+h1{
+    text-indent: 5px;
+    font-size: large;
+    font-weight: 800;
+}
+
+.links{
+    margin: 15px;
+    text-align: center;
+    word-spacing: 5px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.button1{
+    text-align: right;
+}
+
+.sign, .reg{
+    border: 1px solid rgba(128, 128, 128, 0.416);
+    border-radius: 20px;
+    padding: 10px;
+    font-size: x-small;
+}
+
+.sign{
+    background-color: white;
+    color: gray;
+}
+
+.reg{
+    background-color: rgb(0, 128, 255);
+    color: white;
+    border-color: rgb(0, 128, 255);
+}
+
+main{
+    padding: 20px;
+    background-image: url("./img.jpeg");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.text{
+    width: 40%;
+}
+
+.ftext{
+    font-size: xx-large;
+    font-weight: 600;
+}
+
+.ltext{
+    font-size: small;
+    margin: 10px;
+    color: gray;
+}
+
+span{
+    color: rgb(0, 128, 255);
+}
+
+.button2{
+    margin-top: 20px;
+}
+
+.see, .pricing{
+    border: 1px solid rgba(128, 128, 128, 0.416);
+    border-radius: 20px;
+    padding: 10px;
+    font-size: x-small;
+}
+
+.see{
+    background-color: rgb(0, 128, 255);
+    color: white;
+    border-color: rgb(0, 128, 255);
+}
+
+.pricing{
+    background-color: white;
+    color: rgb(0, 128, 255);
+    border-color: rgb(0, 128, 255);
+}
+
+footer span{
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.c1, .c4{
+    color: rgb(0, 132, 255);
+}
+
+.c2, .c6{
+    color: orangered;
+}
+
+.c3{
+    color: rgb(255, 217, 0);
+}
+
+.c5{
+    color: green;
+}

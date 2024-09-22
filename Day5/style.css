@@ -1,0 +1,114 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+body{
+    height: 100svh;
+    max-height: 100svh;
+    width: 100svw;
+    max-width: 100svw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+root{
+    --primary: rgb(230, 79, 129);
+}
+
+.grid-container{
+    display: grid;
+    /* grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px; */
+    grid-template-columns: 6fr 2fr 4fr 2fr 2fr 6fr;
+    grid-template-rows: 1fr 2fr 2fr 1fr;
+    /* grid-template-columns: 1fr 3fr; */
+    /* grid-template-columns: repeat(5,1fr); */
+    /* grid-template-rows: repeat(3,100px); */
+    /* grid-template-columns: repeat(auto-fill,minmax(100px,1fr)); */
+
+    grid-template-areas: 
+    "header header header"
+    "aside c1 c1"
+    "aside c2 c3"
+    "footer footer footer"
+    ;
+
+
+    gap: 5px 10px;  /*row col*/
+
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary);
+    padding: 10px;
+}
+
+.grid-container div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.grid-item1{
+    background-color: lightcoral;
+    /* grid-column-start: 1;
+    grid-column-end: 7; */
+    grid-area: header;
+}
+
+.grid-item2{
+    background-color: darkorchid;
+    /* grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4; */
+    grid-area: aside;
+}
+
+.grid-item3{
+    background-color: orchid;
+    /* grid-column-start: 3;
+    grid-column-end: 7; */
+    grid-area: c1;
+}
+
+.grid-item4{
+    background-color: thistle;
+    /* grid-column-start: 3;
+    grid-column-end: 5; */
+    grid-area: c2;
+}
+
+.grid-item5{
+    background-color: rosybrown;
+    /* grid-column-start: 5;
+    grid-column-end: 7; */
+    grid-area: c3;
+}
+
+
+.grid-item6{
+    background-color: firebrick;
+    /* grid-column-start: 1;
+    grid-column-end: 7; */
+    grid-area: footer;
+}
+
+
+@media(max-width: 800px){
+
+    .grid-container{
+        grid-template-columns: 4fr 2fr;
+        grid-template-areas: 
+        "header header "
+        "c1 c1"
+        "c2 c3"
+        "footer footer"
+        ;
+    }
+    .grid-item2{
+        display: none;
+    }
+
+}
