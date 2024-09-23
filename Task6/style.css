@@ -11,7 +11,6 @@ body{
     width: 100svw;
     max-width: 100svw;
     font-family: "Nunito", sans-serif;
-    padding: 0px 150px;
 }
 
 :root{
@@ -20,28 +19,35 @@ body{
     --border: rgb(226, 226, 226);
 }
 
-@media screen and (min-width: 250px){
-    body{
-        padding: 0px;
-        margin: 0px;
-    }
-    .bg-img{
-        display: none;
-    }
-}
-
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 100px;
+    padding: 20px 60px;
 
-    /* position: fixed; */
-    /* z-index: 1; */
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    background-color: white;
+}
+
+.menu-btn{
+    font-size: 30px;
+    color: var(--secondary);
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#menu{
+    display: none;
 }
 
 h1{
-    font-size: large;
+    font-size: x-large;
     font-family: "Dancing Script", cursive;
     color: var(--primary);
 }
@@ -58,24 +64,29 @@ ul{
     gap: 15px;
 }
 
-header a{
+nav a{
     text-decoration: none;
     color: var(--secondary);
-    font-size: small;
+    font-size: medium;
 }
 
-header button{
+nav a:hover{
+    color: var(--primary);
+}
+
+nav button{
     background-color: var(--primary);
     color: white;
     padding: 10px;
     border-radius: 50px;
     border-color: var(--primary);
-    font-size: x-small;
+    font-size: small;
     font-weight: bold;
 }
 
 main{
     padding: 30px 60px;
+    margin-top: 70px;
     color: var(--secondary);
 }
 
@@ -85,8 +96,9 @@ main{
     align-items: center;
     padding: 60px 40px 40px 40px;
     width: 100%;
-    height: 400px;
+    height: 500px;
     line-height: 1.7;
+    font-size: larger;
     /* border-bottom: 1px solid rgb(205, 205, 205); */
     /* background-image: url("image.png");
     background-size: 400px;
@@ -101,6 +113,7 @@ main{
 
 .info h2{
     font-size: 60px;
+    font-weight: 900;
 }
 
 .btn{
@@ -149,7 +162,7 @@ main{
     width: 350px;
     height: 450px;
     background-image: linear-gradient(to right, white 50%, var(--primary) 50% 100%);
-    border: 1px solid var(--border);
+    /* border: 1px solid var(--border); */
     border-radius: 3px;
 }
 
@@ -167,11 +180,12 @@ main{
     border: 1px solid var(--border);
     /* padding-right: 15px; */
     /* background-image: linear-gradient(to top, var(--primary), white); */
-    background-image: linear-gradient(to right, white 50%, var(--primary) 50% 100%);
+    /* background-image: linear-gradient(to right, white 50%, var(--primary) 50% 100%); */
+    background-color: var(--primary);
 }
 
 .resume-text{
-    line-height: 1.5;
+    line-height: 2;
 }
 
 .resume span{
@@ -301,6 +315,11 @@ main{
     margin: 30px 0px 0px 100px;
 }
 
+.portfolio-cards .card{
+    height: fit-content;
+    color: var(--primary);
+}
+
 .portfolio-cards .card1{
     grid-area: p1;
 }
@@ -325,17 +344,106 @@ main{
     grid-area: p6;
 }
 
-.portfolio-cards .card{
-    display: flex;
-    align-items: center;
-    width: 230px;
-    height: fit-content;
-    border-radius: 5px;
-}
-
 .portfolio-cards img{
     width: 230px;
     height: auto;
     border-radius: 5px;
 }
 
+.portfolio-cards img:hover{
+    opacity: 0.7;
+}
+
+/* .img-hover{
+    width: 230px;
+    background-color: var(--primary);
+    opacity: 0.6;
+    display: none;
+}
+
+.portfolio-cards .card:hover + .img-hover{
+    display: block;
+} */
+
+@media screen and (max-width: 850px){
+    nav a{
+        font-size: small;
+    }
+    nav button{
+        font-size: x-small;
+    }
+}
+
+@media screen and (max-width: 760px){
+    .menu-btn{
+        display: block;
+    }
+    nav{
+        position: absolute;
+        z-index: 2;
+        top: 70px;
+        right: 100px;
+        width: 250px;
+        height: 250px;
+        display: block;
+        line-height: 1.5;
+        background-color: white;
+        border: 1px solid var(--border);
+        border-radius: 5px;
+        padding: 20px;
+        text-align: center;
+        transition: all 0.5s;
+        display: none;
+    }
+    nav ul{
+        display: block;
+    }
+    #menu:checked ~ nav{
+        display: block;
+        top: 70px;
+        right: 100px;
+    }
+    .info .icons i{
+        margin: 20px 0px;
+    }
+    .service-cards{
+        grid-template-columns: 1fr 1fr;
+        transform: translate(-100px,0px);
+    }
+    .skill-grid{
+        grid-template-columns: 1fr;
+        transform: translate(-70px,0px);
+    }
+    .portfolio-cards{
+        transform: translate(-200px,0px);
+    }
+}
+
+@media screen and (max-width: 700px){
+    .bg-img{
+        display: none;
+    }
+    .info-text{
+        flex-basis: 100%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .resume{
+        display: block;
+    }
+    .resume-img img{
+        width: 300px;
+        height: 250px;
+    }
+    .service-cards{
+        grid-template-columns: 1fr;
+    }
+    .skill-grid{
+        transform: translate(-150px,0px);
+    }
+    .portfolio-cards{
+        display: block;
+        transform: translate(-90px,0px);
+    }
+}
