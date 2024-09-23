@@ -34,5 +34,15 @@ document.write(arr.join(" "));
 // var c = arr.concat(arr1,arr2);
 
 
-var num =3 ;
+var num =3.4 ;
 console.log(num**2) //Math.pow(num,2)
+console.log(Math.ceil(num))
+console.log(Math.floor(num))
+console.log(Math.trunc(num))
+console.log(Math.round(num))
+
+console.log(Math.trunc(Math.random())) // random() -> from 0 to 1
+console.log(Math.ceil(Math.random()))
+
+var random = Math.random()*100;
+console.log(Math.trunc(random)-1)
