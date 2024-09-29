@@ -1,0 +1,26 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    box-sizing: border-box;
+    position: relative;
+}
+body{
+    height: 100svh;
+    max-height: 100svh;
+    width: 100svw;
+    max-width: 100svw;
+
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Playfair Display", serif; */
+}
+
+.quote{
+    font-family: "Fredoka", sans-serif;
+}
+
+img{
+    height: 400px;
+}
