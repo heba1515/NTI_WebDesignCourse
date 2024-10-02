@@ -1,0 +1,155 @@
+@use "colors";          //fileName.$name
+@import "sizes";    //$name
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: colors.$primary-color;
+
+    h1{
+        @extend .not-private;
+    }
+
+    nav{
+        ul{
+            display: flex;
+            gap: 15px;
+            list-style-type: none;
+
+            a{
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+}
+
+main{
+    background-color: colors.$secondary-color;
+    width: $main-width;
+    height: $main-height;
+    // padding: 15px;
+}
+
+
+//============== for loop =================
+@for $i from 1 through 3{
+    .div-#{$i}{
+        width: $div-width;
+        height: $div-height;
+        background-color: colors.$div-color;
+        padding: 20px;
+        margin: 20px;
+
+        &:hover{
+            @extend %private;
+        }
+    }
+}
+
+
+//============ while loop ================
+$w:1;
+@while $w<=3{
+    .button-#{$w}{
+        @extend %btn;
+    }
+}
+
+
+//============== placeholder ===============
+%private{
+    border: 1px solid rgb(200, 200, 200);
+    box-shadow: 0px 0px 10px rgb(200, 200, 200);
+}
+
+.not-private{
+    text-shadow: 0px 0px 5px beige;
+}
+
+%btn{
+    padding: 5px;
+    border: none;
+    border-radius:5px;
+    background-color: darkorchid;
+}
+
+
+//============= function =================
+@function duplicate($m){
+    @return $m*2;
+}
+
+main{
+    margin: 5px;
+    padding: duplicate(5px);
+}
+
+@function border(){
+    @return 1px solid gray;
+}
+
+@function border-radius(){
+    @return 20px;
+}
+
+main{
+    div{
+        border: border();
+        border-radius: border-radius();
+    }
+}
+
+
+
+//============== mixin ===============
+@mixin style($h,$c){
+    height: $h;
+    width: $h*2;
+    background-color: $c;
+}
+
+main{
+    div{
+        @include style(100px,pink);
+    }
+}
+
+
+
+//=============== if ==================
+$theme:"dark";
+@if($theme=="dark"){
+    main{
+        background-color: black;
+        color: white;
+    }
+}@else if($theme=="light"){
+    main{
+        background-color: white;
+        color: black;
+    }
+}@else{
+    main{
+        background-color: colors.$secondary-color;
+    }
+}
+
+
+//============== each&map ================
+$colors: gray 10px, orangered 20px, coral 30px;
+@each $c, $h in $colors{
+    .btn-#{$c}{
+        background-color: $c;
+        height: $h;
+    }
+}
